@@ -9,8 +9,6 @@ passport.use(new localStrategy(userModel.authenticate()));
 const upload = require("./multer");
 const utils = require("../utils/utils");
 
-
-// GET
 router.get("/", function (req, res) {
   res.render("index", { footer: false });
 });
@@ -200,8 +198,6 @@ router.post(
     res.redirect("/edit");
   }
 );
-
-// POST
 
 router.post("/register", function (req, res) {
   const user = new userModel({
